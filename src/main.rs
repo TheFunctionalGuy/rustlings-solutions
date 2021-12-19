@@ -147,7 +147,7 @@ fn main() {
     match command {
         Subcommands::List(subargs) => {
             if !subargs.paths && !subargs.names {
-                println!("{:<17}\t{:<46}\t{:<7}", "Name", "Path", "Status");
+                println!("{:<24}\t{:<48}\t{:<7}", "Name", "Path", "Status");
             }
             let mut exercises_done: u16 = 0;
             let filters = subargs.filter.clone().unwrap_or_default().to_lowercase();
@@ -174,7 +174,7 @@ fn main() {
                     } else if subargs.names {
                         format!("{}\n", e.name)
                     } else {
-                        format!("{:<17}\t{:<46}\t{:<7}\n", e.name, fname, status)
+                        format!("{:<24}\t{:<48}\t{:<7}\n", e.name, fname, status)
                     };
                     // Somehow using println! leads to the binary panicking
                     // when its output is piped.
