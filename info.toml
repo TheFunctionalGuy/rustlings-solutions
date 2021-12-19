@@ -985,6 +985,13 @@ https://doc.rust-lang.org/stable/rust-by-example/error/multiple_error_types/reen
 Challenge: Can you make the `TryFrom` implementations generic over many integer types?"""
 
 [[exercises]]
+name = "try_from_into_variation"
+path = "exercises/conversions/try_from_into_variation.rs"
+mode = "test"
+hint = """
+This is a variation of the previous exercise using try_from to convert i16 values into u8 values."""
+
+[[exercises]]
 name = "as_ref_mut"
 path = "exercises/conversions/as_ref_mut.rs"
 mode = "test"
